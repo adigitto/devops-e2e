@@ -1,0 +1,1 @@
+Simple Project demonstrating EKS deployments in a GitOps based model
