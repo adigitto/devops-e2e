@@ -4,7 +4,7 @@ FROM golang:1.20-alpine as builder
 WORKDIR /app
 
 COPY go.mod ./
-RUN go mod download || true
+RUN go mod download
 
 # Copy source code and compile statically
 COPY main.go ./
