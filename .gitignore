@@ -1,0 +1,89 @@
+# ==========================================
+# TERRAFORM
+# ==========================================
+# Local .terraform directories and plugins
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform CLI configuration
+.terraformrc
+terraform.rc
+
+# Plan files
+*.tfplan
+
+
+# ==========================================
+# GO (Golang)
+# ==========================================
+# Binaries for Go applications
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+dist/
+
+# Test binary files, output from 'go test -c'
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories (though usually vendored, leave un-ignored if committing vendor)
+# vendor/
+
+# Go workspace file
+go.work
+go.work.sum
+
+
+# ==========================================
+# DOCKER & CONTAINERS
+# ==========================================
+# Local container data, volumes, or socket files
+.docker/
+docker-compose.override.yml
+*.sock
+
+
+# ==========================================
+# ARGOCD & GITOPS MANIFESTS
+# ==========================================
+# Local Kustomize build outputs or temporary helm charts
+charts/*/charts/
+charts/*.tgz
+.argocd/
+argocd-cli.log
+
+
+# ==========================================
+# IDEs, EDITORS & OS FILES
+# ==========================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (IntelliJ, GoLand, etc.)
+.idea/
+*.iml
+
+# OS-generated metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
