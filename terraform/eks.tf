@@ -15,17 +15,22 @@ module "eks" {
   # Allow the Terraform caller to administer the cluster using the same AWS profile.
   enable_cluster_creator_admin_permissions = true
 
+  # v21 renames this from "cluster_addons" to "addons"
   addons = {
     vpc-cni = {
-      before_compute = true
+      before_compute              = true
+      resolve_conflicts_on_create = "OVERWRITE"
     }
-    kube-proxy = {}
-    coredns    = {}
+    kube-proxy = {
+      resolve_conflicts_on_create = "OVERWRITE"
+    }
+    coredns = {
+      resolve_conflicts_on_create = "OVERWRITE"
+    }
   }
 
   eks_managed_node_groups = {
     general = {
-      # Let EKS select the recommended release at creation; no SSM lookup required.
       use_latest_ami_release_version = false
       ami_type                       = "AL2023_x86_64_STANDARD"
       desired_size                   = 2
